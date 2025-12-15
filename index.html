@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pretty Hustle Music - OMG Girlz</title>
+  <meta name="description" content="The iconic Atlanta-bred girl group OMG Girlz is back! Get tickets, watch videos, and experience the powerhouse performers.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            purple: {
+              600: '#8B3DFF',
+            },
+            pink: {
+              500: '#E84C9A',
+            }
+          },
+          fontFamily: {
+            'mono': ['Space Mono', 'monospace'],
+            'sans': ['IBM Plex Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Base Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    body {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Mobile menu animation */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+    .mobile-menu.open {
+      max-height: 400px;
+    }
+    
+    /* Group hover fix for cards */
+    .artist-card:hover .card-text {
+      color: white;
+    }
+    .artist-card:hover .card-border {
+      border-color: white;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-white">
+  
+  <!-- HEADER -->
+  <header class="bg-black border-b-4 border-black sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img 
+          src="images/logo.png" 
+          alt="Pretty Hustle Music" 
+          class="h-16 sm:h-24 md:h-28 w-auto"
+        >
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex gap-8 lg:gap-12 items-center">
+        <a href="#how-it-works" class="text-white text-sm font-medium uppercase tracking-wider hover:opacity-70 transition-opacity">About</a>
+        <a href="#new-releases" class="text-white text-sm font-medium uppercase tracking-wider hover:opacity-70 transition-opacity">New Releases</a>
+        <a href="#artists" class="text-white text-sm font-medium uppercase tracking-wider hover:opacity-70 transition-opacity">Music</a>
+        <a href="#videos" class="text-white text-sm font-medium uppercase tracking-wider hover:opacity-70 transition-opacity">Videos</a>
+        <a href="#shows" class="text-white text-sm font-medium uppercase tracking-wider hover:opacity-70 transition-opacity">Shows</a>
+        <a href="#contact" class="bg-purple-600 text-white px-6 py-2 font-bold text-xs uppercase tracking-widest hover:bg-pink-500 transition-colors">Get Notified</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-white text-2xl p-2" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="mobile-menu md:hidden bg-black border-t border-gray-800 px-4">
+      <div class="flex flex-col gap-4 py-6">
+        <a href="#how-it-works" class="text-white text-base font-medium uppercase tracking-wider hover:text-purple-400 transition-colors py-2">About</a>
+        <a href="#new-releases" class="text-white text-base font-medium uppercase tracking-wider hover:text-purple-400 transition-colors py-2">New Releases</a>
+        <a href="#artists" class="text-white text-base font-medium uppercase tracking-wider hover:text-purple-400 transition-colors py-2">Music</a>
+        <a href="#videos" class="text-white text-base font-medium uppercase tracking-wider hover:text-purple-400 transition-colors py-2">Videos</a>
+        <a href="#shows" class="text-white text-base font-medium uppercase tracking-wider hover:text-purple-400 transition-colors py-2">Shows</a>
+        <a href="#contact" class="bg-purple-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors text-center mt-2">Get Notified</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-1">
+    
+    <!-- HERO SECTION -->
+    <section class="bg-white mt-0">
+      <!-- Hero Image - Full width like header -->
+      <div class="w-full overflow-hidden bg-white">
+        <img
+          src="images/hero-image.png"
+          alt="Pretty Hustle Music - OMG Girlz"
+          class="w-full h-auto object-cover"
+        >
+      </div>
+
+      <!-- Hero Content -->
+      <div class="bg-white px-4 sm:px-6 md:px-12 py-6 md:py-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+          <!-- Left Column -->
+          <div>
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold tracking-wider mb-4 md:mb-6 leading-tight">
+              THE OMG GIRLZ<br>ARE BACK!
+            </h1>
+            <p class="text-sm sm:text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed">
+              The iconic Atlanta-bred girl group is making waves with their vibrant style, dynamic harmonies, and bold, youthful energy. Originally formed by Tameka Tiny Harris, the OMG Girlz rose to national fame with hits like Gucci This and Where the Boys At.
+            </p>
+            <a href="#artists" class="inline-block bg-purple-600 text-white px-6 sm:px-8 py-3 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors duration-200 border-2 border-purple-600 w-full sm:w-auto text-center">
+              Watch Videos
+            </a>
+          </div>
+
+          <!-- Right Column - Tour Tickets -->
+          <div class="border-t-4 md:border-t-0 md:border-l-4 border-black pt-6 md:pt-0 md:pl-8 mt-2 md:mt-0">
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold tracking-wider mb-4 md:mb-6 uppercase">
+              Get Your Tickets!
+            </h2>
+            <div class="space-y-4 md:space-y-5">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-gray-700 mb-1">AUG. 30 — ATLANTA, GA — VINYL</p>
+                <a href="https://www.ticketmaster.com/event/0E0062FCC4227164" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-pink-500 hover:underline font-bold text-sm transition-colors">Buy tickets →</a>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-gray-700 mb-1">SEPT. 03 — NEW YORK, NY — SOB'S</p>
+                <a href="https://wl.eventim.us/event/omg-girlz-the-name-stays-tour/659624?afflky=SOBsSoundofBrazil" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-pink-500 hover:underline font-bold text-sm transition-colors">Buy tickets →</a>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-gray-700 mb-1">SEPT. 10 — WASHINGTON, D.C. — PEARL STREET</p>
+                <a href="https://www.unionstagepresents.com/shows/omg-girlz/" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-pink-500 hover:underline font-bold text-sm transition-colors">Buy tickets →</a>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-gray-700 mb-1">SEPT. 12 — DALLAS, TX — ECHO LOUNGE</p>
+                <a href="https://www.ticketmaster.com/event/0C0062FC81F30FA0" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-pink-500 hover:underline font-bold text-sm transition-colors">Buy tickets →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO EMBED SECTION -->
+    <section class="bg-white py-8 md:py-12 px-4 sm:px-6 md:px-12">
+      <div class="max-w-7xl mx-auto">
+        <div class="border-t-4 border-black mb-6 md:mb-8"></div>
+        <div class="mb-6 md:mb-8">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider mb-3 uppercase">Watch Now</h2>
+          <p class="text-base sm:text-lg text-gray-700 max-w-2xl">Experience the iconic energy of OMG Girlz with their breakout hit.</p>
+        </div>
+        <a href="https://www.youtube.com/watch?v=y-yEy4sv-yU" target="_blank" rel="noopener noreferrer" class="block aspect-video overflow-hidden mb-4 md:mb-6 relative group cursor-pointer bg-black">
+          <img 
+            src="images/youtube-thumbnail.jpg" 
+            alt="OMG Girlz - Music Video" 
+            class="w-full h-full object-cover group-hover:opacity-80 transition-opacity"
+          >
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-700 transition-colors shadow-lg">
+              <svg class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 bg-black bg-opacity-75 px-3 py-1 rounded">
+            <span class="text-white text-sm font-bold">▶ Watch on YouTube</span>
+          </div>
+        </a>
+        <div class="border-l-4 border-black pl-4 sm:pl-6">
+          <h3 class="text-xl sm:text-2xl font-bold tracking-wider uppercase mb-2">OMG Girlz - Best Hits Collection</h3>
+          <p class="text-gray-600 text-base">Experience the iconic music and performances that defined the OMG Girlz era.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS / ABOUT SECTION -->
+    <section id="how-it-works" class="bg-white px-4 sm:px-6 md:px-12">
+      <div class="bg-gradient-to-b from-white to-gray-100 -mx-4 sm:-mx-6 md:-mx-12 px-4 sm:px-6 md:px-12 py-8 md:py-12 mb-6 md:mb-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12">
+            <div>
+              <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider mb-3 md:mb-4">ABOUT THE<br>GROUP</h2>
+            </div>
+            <div class="md:col-span-2">
+              <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl">
+                The OMG Girlz are a powerhouse American girl group from Atlanta, Georgia, celebrated for their unapologetically bold style, catchy melodies, and charismatic performances. Created in 2009 by music entrepreneur Tameka Tiny Harris, the group continues to influence youth culture and inspire a new generation of artists.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto pb-8 md:pb-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+          <div class="border-l-4 border-black pl-4 sm:pl-5 py-2 sm:py-3 hover:bg-gray-50 transition-colors duration-200">
+            <h3 class="text-base sm:text-lg font-bold tracking-wide mb-1 sm:mb-2 uppercase">Iconic Girl Group</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Three powerhouse performers with millions of fans</p>
+          </div>
+          <div class="border-l-4 border-black pl-4 sm:pl-5 py-2 sm:py-3 hover:bg-gray-50 transition-colors duration-200">
+            <h3 class="text-base sm:text-lg font-bold tracking-wide mb-1 sm:mb-2 uppercase">Chart-Topping Hits</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Gucci This, Where the Boys At, Baddie and more</p>
+          </div>
+          <div class="border-l-4 border-black pl-4 sm:pl-5 py-2 sm:py-3 hover:bg-gray-50 transition-colors duration-200">
+            <h3 class="text-base sm:text-lg font-bold tracking-wide mb-1 sm:mb-2 uppercase">Cultural Impact</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Trendsetting style and empowerment-focused messaging</p>
+          </div>
+          <div class="border-l-4 border-black pl-4 sm:pl-5 py-2 sm:py-3 hover:bg-gray-50 transition-colors duration-200">
+            <h3 class="text-base sm:text-lg font-bold tracking-wide mb-1 sm:mb-2 uppercase">Multi-Platform Presence</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Music, videos, and social media content creation</p>
+          </div>
+          <div class="border-l-4 border-black pl-4 sm:pl-5 py-2 sm:py-3 hover:bg-gray-50 transition-colors duration-200">
+            <h3 class="text-base sm:text-lg font-bold tracking-wide mb-1 sm:mb-2 uppercase">Live Performances</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Dynamic stage presence and energetic choreography</p>
+          </div>
+          <div class="border-l-4 border-black pl-4 sm:pl-5 py-2 sm:py-3 hover:bg-gray-50 transition-colors duration-200">
+            <h3 class="text-base sm:text-lg font-bold tracking-wide mb-1 sm:mb-2 uppercase">Brand Collaborations</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Fashion, music, and entertainment partnerships</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED ARTISTS SECTION -->
+    <section id="artists" class="bg-white py-8 md:py-12 px-4 sm:px-6 md:px-12">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider mb-3 uppercase">OMG Girlz Hits</h2>
+        <p class="text-base sm:text-lg text-gray-700 mb-6 md:mb-10 max-w-2xl">The songs that made the moment and continue to define the OMG Girlz legacy.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+          <!-- Hit Songs -->
+          <div class="artist-card border-2 border-black p-4 sm:p-5 md:p-6 hover:bg-black transition-colors duration-200 group flex flex-col h-full">
+            <h3 class="text-lg sm:text-xl font-bold tracking-wide mb-2 sm:mb-3 uppercase group-hover:text-white transition-colors">Gucci This (Gucci That)</h3>
+            <p class="text-sm text-gray-600 group-hover:text-gray-300 mb-3 leading-relaxed transition-colors">Breakout hit that defined the group's sound</p>
+            <div class="border-t-2 border-black group-hover:border-white pt-3 transition-colors flex-grow">
+              <p class="text-xs uppercase tracking-widest font-bold group-hover:text-white transition-colors">Millions of views across platforms</p>
+            </div>
+            <a href="https://youtu.be/GYSw4k0pjME" target="_blank" rel="noopener noreferrer" class="mt-4 bg-purple-600 text-white px-5 py-2 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors duration-200 w-full inline-block text-center">Watch Video</a>
+          </div>
+          <div class="artist-card border-2 border-black p-4 sm:p-5 md:p-6 hover:bg-black transition-colors duration-200 group flex flex-col h-full">
+            <h3 class="text-lg sm:text-xl font-bold tracking-wide mb-2 sm:mb-3 uppercase group-hover:text-white transition-colors">Where the Boys At?</h3>
+            <p class="text-sm text-gray-600 group-hover:text-gray-300 mb-3 leading-relaxed transition-colors">Chart-topping single and fan favorite</p>
+            <div class="border-t-2 border-black group-hover:border-white pt-3 transition-colors flex-grow">
+              <p class="text-xs uppercase tracking-widest font-bold group-hover:text-white transition-colors">Iconic teen pop anthem</p>
+            </div>
+            <a href="https://youtu.be/Y4ZsIo7M19Y" target="_blank" rel="noopener noreferrer" class="mt-4 bg-purple-600 text-white px-5 py-2 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors duration-200 w-full inline-block text-center">Watch Video</a>
+          </div>
+          <div class="artist-card border-2 border-black p-4 sm:p-5 md:p-6 hover:bg-black transition-colors duration-200 group flex flex-col h-full">
+            <h3 class="text-lg sm:text-xl font-bold tracking-wide mb-2 sm:mb-3 uppercase group-hover:text-white transition-colors">Baddie</h3>
+            <p class="text-sm text-gray-600 group-hover:text-gray-300 mb-3 leading-relaxed transition-colors">Empowerment anthem showcasing group's energy</p>
+            <div class="border-t-2 border-black group-hover:border-white pt-3 transition-colors flex-grow">
+              <p class="text-xs uppercase tracking-widest font-bold group-hover:text-white transition-colors">Viral sensation on social media</p>
+            </div>
+            <a href="https://youtu.be/2FXWdoxEtrQ" target="_blank" rel="noopener noreferrer" class="mt-4 bg-purple-600 text-white px-5 py-2 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors duration-200 w-full inline-block text-center">Watch Video</a>
+          </div>
+          <div class="artist-card border-2 border-black p-4 sm:p-5 md:p-6 hover:bg-black transition-colors duration-200 group flex flex-col h-full">
+            <h3 class="text-lg sm:text-xl font-bold tracking-wide mb-2 sm:mb-3 uppercase group-hover:text-white transition-colors">Do You Remember</h3>
+            <p class="text-sm text-gray-600 group-hover:text-gray-300 mb-3 leading-relaxed transition-colors">Nostalgic fan favorite with smooth R&B vibes</p>
+            <div class="border-t-2 border-black group-hover:border-white pt-3 transition-colors flex-grow">
+              <p class="text-xs uppercase tracking-widest font-bold group-hover:text-white transition-colors">Classic OMG Girlz sound</p>
+            </div>
+            <a href="https://youtu.be/y-yEy4sv-yU" target="_blank" rel="noopener noreferrer" class="mt-4 bg-purple-600 text-white px-5 py-2 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors duration-200 w-full inline-block text-center">Watch Video</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section id="contact" class="bg-black text-white py-10 md:py-16 px-4 sm:px-6 md:px-12">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider mb-4 md:mb-6 leading-tight uppercase">Experience<br>OMG Girlz</h2>
+        <p class="text-base sm:text-lg text-gray-400 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed">
+          The OMG Girlz continue to influence youth culture with their bold style, dynamic performances, and empowerment-focused messaging. Join millions of fans worldwide.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+          <a href="https://youtube.com/@omgtv" target="_blank" rel="noopener noreferrer" class="bg-purple-600 text-white px-6 sm:px-10 py-3 sm:py-4 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors duration-200 border-2 border-purple-600 w-full sm:w-auto text-center">Subscribe on YouTube</a>
+          <a href="#artists" class="border-2 border-purple-600 text-white px-6 sm:px-10 py-3 sm:py-4 font-bold text-sm uppercase tracking-widest hover:bg-purple-600 transition-colors duration-200 w-full sm:w-auto text-center">Hear New Music</a>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER FAMILY ARTISTS SECTION -->
+    <section class="bg-gray-100 py-10 md:py-16 px-4 sm:px-6 md:px-12">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wider mb-4 md:mb-6 leading-tight uppercase text-center">Other Family Artists</h2>
+        <p class="text-base sm:text-lg text-gray-600 mb-8 md:mb-12 max-w-2xl mx-auto text-center">Meet the talented artists in the Pretty Hustle Music family.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <!-- Heiress -->
+          <div class="bg-white border-2 border-black p-6 md:p-8">
+            <div class="aspect-square overflow-hidden mb-6">
+              <img src="images/heiress.jpg" alt="Heiress" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold tracking-wider mb-3 uppercase">Heiress</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">The youngest star in the family, Heiress is already making waves with her natural talent and undeniable charisma. A true princess with star power.</p>
+            <a href="https://youtu.be/GYSw4k0pjME?si=-zG8spW0HkrIBaJh" target="_blank" rel="noopener noreferrer" class="bg-purple-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors duration-200 inline-block text-center">Watch Video</a>
+          </div>
+          
+          <!-- Tiny -->
+          <div class="bg-white border-2 border-black p-6 md:p-8">
+            <div class="aspect-square overflow-hidden mb-6">
+              <img src="images/tiny.jpg" alt="Tiny" class="w-full h-full object-cover">
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold tracking-wider mb-3 uppercase">Tiny</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Grammy-winning songwriter, singer, and the visionary behind Pretty Hustle Music. Tiny continues to shape the sound of R&B and mentor the next generation.</p>
+            <a href="https://youtu.be/xQruYG2bu74?si=S1bejB9UHbDUrZFH" target="_blank" rel="noopener noreferrer" class="bg-purple-600 text-white px-6 py-3 font-bold text-sm uppercase tracking-widest hover:bg-pink-500 transition-colors duration-200 inline-block text-center">Watch Video</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white border-t-4 border-white py-8 md:py-12 px-4 sm:px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 mb-8 md:mb-10">
+        <!-- Brand -->
+        <div class="col-span-2 sm:col-span-2 md:col-span-1">
+          <img src="images/logo.png" alt="Pretty Hustle Music" class="h-14 sm:h-16 md:h-20 mb-3 object-contain">
+          <p class="text-gray-400 text-sm leading-relaxed">Where family is everything. We celebrate bold voices, vibrant talent, and the next generation of music icons.</p>
+        </div>
+        <!-- Music Links -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest mb-3 md:mb-4 text-gray-300">Music</h4>
+          <ul class="space-y-2">
+            <li><a href="https://youtu.be/GYSw4k0pjME" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors">Gucci This</a></li>
+            <li><a href="https://youtu.be/Y4ZsIo7M19Y" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors">Where the Boys At</a></li>
+            <li><a href="https://youtu.be/2FXWdoxEtrQ" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors">Baddie</a></li>
+            <li><a href="https://youtube.com/@omgtv" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors">YouTube Channel</a></li>
+          </ul>
+        </div>
+        <!-- Members Links -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest mb-3 md:mb-4 text-gray-300">Members</h4>
+          <ul class="space-y-2">
+            <li><a href="#artists" class="text-gray-400 hover:text-white text-sm transition-colors">Zonnique Star</a></li>
+            <li><a href="#artists" class="text-gray-400 hover:text-white text-sm transition-colors">Bahja Beauty</a></li>
+            <li><a href="#artists" class="text-gray-400 hover:text-white text-sm transition-colors">Breaunna Babydoll</a></li>
+            <li><a href="#artists" class="text-gray-400 hover:text-white text-sm transition-colors">Tameka Tiny</a></li>
+          </ul>
+        </div>
+        <!-- Connect Links -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest mb-3 md:mb-4 text-gray-300">Connect</h4>
+          <ul class="space-y-2">
+            <li><a href="https://youtube.com/@omgtv" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white text-sm transition-colors">YouTube</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Instagram</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Twitter</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t-2 border-gray-800 pt-5 md:pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <p class="text-gray-500 text-xs font-mono text-center sm:text-left">© 2025 Pretty Hustle Music. All rights reserved.</p>
+        <div class="flex gap-5 sm:gap-6">
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      menuBtn.textContent = mobileMenu.classList.contains('open') ? '✕' : '☰';
+    });
+
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuBtn.textContent = '☰';
+      });
+    });
+  </script>
+</body>
+</html>
